@@ -2,7 +2,8 @@ class Quote < ApplicationRecord
   belongs_to :type
   belongs_to :category
 
-  after_save :create_quote_ticket
+	# need to be uncomment : after_save
+  #after_save :create_quote_ticket
 
   def create_quote_ticket
       client = ZendeskAPI::Client.new do |config|

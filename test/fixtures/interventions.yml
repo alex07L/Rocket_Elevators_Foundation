@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: one
+  customer: one
+  building: one
+  batery: one
+  column: one
+  elevator: one
+  employee: one
+  start: 2020-08-10 09:37:03
+  end: 2020-08-10 09:37:03
+  resultat: MyString
+  rapport: one
+  status: one
+
+two:
+  author: two
+  customer: two
+  building: two
+  batery: two
+  column: two
+  elevator: two
+  employee: two
+  start: 2020-08-10 09:37:03
+  end: 2020-08-10 09:37:03
+  resultat: MyString
+  rapport: two
+  status: two

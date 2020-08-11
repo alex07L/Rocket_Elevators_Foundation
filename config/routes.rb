@@ -23,8 +23,13 @@ Rails.application.routes.draw do
   get 'corporate', to: 'pages#corporate'
   get 'quote', to: 'pages#quote'
   get 'geolocalisation/index'
-  
+  get 'intervention', to: 'intervention#intervention'
+  get 'customer', to: 'intervention#customer'
+  get 'building', to: 'intervention#building'
+  get 'battery', to: 'intervention#battery'
+  get 'column', to: 'intervention#column'
   get 'new', to: 'pages#new'
   get 'test', to: 'pages#test'
+  post 'intervention', to: 'intervention#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

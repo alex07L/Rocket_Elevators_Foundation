@@ -11,8 +11,11 @@ class Elevator < ApplicationRecord
   belongs_to :category
   belongs_to :type
   belongs_to :status
+  has_many :intervention
 
-  before_save:notify_tech
+# need to be uncomment : after_update and before_update and before_save
+
+  #before_save:notify_tech
 
   def notify_tech
     if self.status_id_changed?
@@ -31,11 +34,12 @@ class Elevator < ApplicationRecord
     end
   end
 
+	
 
-  after_update :send_sms, if: :intervention?
+  #after_update :send_sms, if: :intervention?
    
     
-    before_update :slack_notifier
+    #before_update :slack_notifier
 
     def slack_notifier
 
