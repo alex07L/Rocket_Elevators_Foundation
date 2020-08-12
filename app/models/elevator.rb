@@ -15,7 +15,7 @@ class Elevator < ApplicationRecord
 
 # need to be uncomment : after_update and before_update and before_save
 
-  #before_save:notify_tech
+  before_save:notify_tech
 
   def notify_tech
     if self.status_id_changed?
@@ -25,7 +25,7 @@ class Elevator < ApplicationRecord
       rocketElevAlert = ENV["TWILIO_FROM"]
       tech_phone_number = ENV["TWILIO_TO"]
       sms_body = "The Elevator #{self.id} with Serial Number #{self.serialNumber} needs an intervention"
-      if self.status_id_was != Status.find_by(name: "intervention")
+      if self.status_id == Status.find_by(name: "intervention").id
          @client.messages.create(
           from: ENV["TWILIO_FROM"],
           to: tech_phone_number, #self.column.battery.building.techPhone,
@@ -36,7 +36,7 @@ class Elevator < ApplicationRecord
 
 	
 
-  #after_update :send_sms, if: :intervention?
+  after_update :send_sms, if: :intervention?
    
     
     #before_update :slack_notifier
