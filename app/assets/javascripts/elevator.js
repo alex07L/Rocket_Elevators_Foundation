@@ -1,3 +1,4 @@
+$(document).ready(function(){
 $(window).bind('scroll', function() {
     var currentTop = $(window).scrollTop();
     var elems = $('.scrollspy');
@@ -13,4 +14,5 @@ $(window).bind('scroll', function() {
         $("#melevator").animate({ top: "+="+(scroll)+"px"}, time)
       }
     })
+});
 });
