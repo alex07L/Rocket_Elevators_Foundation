@@ -15,6 +15,102 @@ header style
     height: 600px;
 }
 
+#corporate{
+    background-image: url('AdobeStock_66781279.jpeg');
+	background-repeat:no-repeat;
+	height:600px;
+	color: #fff !important;
+}
+
+#corporate h1{
+	color: #fff;
+}
+
+section.back-black{
+	border-bottom: 6px solid #000;
+}
+
+.back-blue{
+	background-color: #0000FF;
+	height:50px;
+	
+}
+.back-blue h2{
+	color: #fff;
+	margin: 0;
+	
+}
+
+.back-red{
+	background-color: #FF0000;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	
+}
+.back-red h2{
+	color: #fff;
+	margin: 0;
+	
+}
+
+#standard-commercial{
+	padding: 0px;
+	background-image: url('CommercialElevator1.jpeg');
+	height:600px;
+	margin: 0 10px 0 10px;
+}
+#premium-commercial{
+		padding: 0px;
+	background-image: url('CommercialElevator2.jpeg');
+	background-position: center center;
+	height:600px;
+	margin: 0 10px 0 10px;
+}
+
+#excelium-commercial{
+		padding: 0px;
+	background-image: url('CommercialElevator3.jpeg');
+	background-position: center center;
+	margin: 0 10px 0 10px;
+	height:600px;
+}
+
+.vertical { 
+    border-left: 2px solid #a33546;
+    height: 505px;
+    width: 10px;
+    position: absolute;
+    left: 50%;
+    
+}
+.horizontal{
+    margin: 75px 100px 0 100px;
+    border-top: 6px solid #a33546;
+    width: 50px;
+}
+.margin{
+    margin-bottom: 250px;
+}
+#melevator{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 180px;
+    z-index: 1;
+}
+
+.step h2{
+    color: #d9d2c2;
+}
+
+.step h3, .step p{
+    color: #ae4e5c;
+}
+
+
 /*----------------*/
 
 .blue{

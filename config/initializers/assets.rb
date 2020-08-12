@@ -24,3 +24,4 @@ Rails.application.config.assets.precompile += %w( quote.js )
 Rails.application.config.assets.precompile += %w[ckeditor/config.js]
 Rails.application.config.assets.precompile += %w( donate.js )
 Rails.application.config.assets.precompile += %w( intervention.js )
+Rails.application.config.assets.precompile += %w( elevator.js )
