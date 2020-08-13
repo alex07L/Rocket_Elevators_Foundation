@@ -53,7 +53,9 @@ section.back-black{
 }
 
 .back-red{
-	background-color: #FF0000;
+	
+	border: 2px solid #FF0000;
+	border-radius: 25px;
 	height:100px;
 	position:absolute;
 	bottom:0;
@@ -120,21 +122,14 @@ section.back-black{
 	height:600px;
 }
 
-.vertical { 
+#vertical { 
     border-left: 2px solid #a33546;
-    height: 505px;
+    height: 560px;
     width: 10px;
+	height:95%;
     position: absolute;
     left: 50%;
     
-}
-.vertical-short{
-    border-left: 2px solid #a33546;
-    height: 100px;
-    width: 10px;
-    position: absolute;
-    left: 50%;
-   
 }
 
 .horizontal{
