@@ -85,7 +85,7 @@
 	Ajax Reinit:		Init(true);
  **************************************************************** **/
 	function Init(is_ajax) {
-
+		$(".service-show").slideDown(1000);
 		// First Load Only
 		if(is_ajax != true) {
 		

@@ -1,4 +1,3 @@
-$(document).ready(function(){
 $(window).scroll(function() {
     var currentTop = $(window).scrollTop();
     var elems = $('.scrollspy');
@@ -11,10 +10,8 @@ $(window).scroll(function() {
         var elevator = $("#melevator").offset().top;
         var time = 5;
         var scroll = (elemTop-elevator)/time;
-		console.log("ok"+id+" "+elemTop)
         $("#melevator").animate({ top: "+="+(scroll)+"px"}, time)
       }
 	  
     })
-});
 });
