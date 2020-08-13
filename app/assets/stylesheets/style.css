@@ -36,6 +36,9 @@ header style
 #residential h1{
 	color: #fff;
 }
+.service-show{
+	display:none;
+}
 
 section.back-black{
 	border-bottom: 6px solid #000;
