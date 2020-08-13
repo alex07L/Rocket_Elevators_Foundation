@@ -8,7 +8,6 @@ $(window).scroll(function() {
 	  
       if(currentTop >= elemTop-400 && currentTop <= elemBottom-225){
         var id = $(this).attr('id');
-        test=0;
         var elevator = $("#melevator").offset().top;
         var time = 5;
         var scroll = (elemTop-elevator)/time;
