@@ -26,6 +26,17 @@ header style
 	color: #fff;
 }
 
+#residential{
+    background-image: url('AdobeStock_3294993.jpeg');
+	background-repeat:no-repeat;
+	height:600px;
+	color: #fff !important;
+}
+
+#residential h1{
+	color: #fff;
+}
+
 section.back-black{
 	border-bottom: 6px solid #000;
 }
@@ -42,7 +53,9 @@ section.back-black{
 }
 
 .back-red{
-	background-color: #FF0000;
+	
+	border: 2px solid #FF0000;
+	border-radius: 25px;
 	height:100px;
 	position:absolute;
 	bottom:0;
@@ -58,12 +71,14 @@ section.back-black{
 
 #standard-commercial{
 	padding: 0px;
+	background-repeat: no-repeat;
 	background-image: url('CommercialElevator1.jpeg');
 	height:600px;
 	margin: 0 10px 0 10px;
 }
 #premium-commercial{
 		padding: 0px;
+
 	background-image: url('CommercialElevator2.jpeg');
 	background-position: center center;
 	height:600px;
@@ -78,14 +93,45 @@ section.back-black{
 	height:600px;
 }
 
-.vertical { 
+#standard-residential{
+	padding: 0px;
+	background-image: url('ResidentialElevator1.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:600px;
+	margin: 0 10px 0 10px;
+}
+#premium-residential{
+		padding: 0px;
+	background-image: url('ResidentialElevator2.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:600px;
+	margin: 0 10px 0 10px;
+}
+
+#excelium-residential{
+		padding: 0px;
+	background-image: url('Small-Elevator.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	margin: 0 10px 0 10px;
+	height:600px;
+}
+
+#vertical { 
     border-left: 2px solid #a33546;
-    height: 505px;
+    height: 560px;
     width: 10px;
+	height:95%;
     position: absolute;
     left: 50%;
     
 }
+
 .horizontal{
     margin: 75px 100px 0 100px;
     border-top: 6px solid #a33546;
