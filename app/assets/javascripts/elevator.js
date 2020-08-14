@@ -1,3 +1,4 @@
+$(document).ready(function(){
 $(window).scroll(function() {
     var currentTop = $(window).scrollTop();
     var elems = $('.scrollspy');
@@ -14,4 +15,5 @@ $(window).scroll(function() {
       }
 	  
     })
+});
 });
