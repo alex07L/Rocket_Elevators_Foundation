@@ -1,0 +1,11 @@
+backend:
+  name: github
+  repo: alex07L/Rocket_Elevators_Foundation 
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'assets/uploads'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/'
+    fields:
+      - { name: Title }

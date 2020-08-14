@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Rocket Elevator have a new blog section"
+date:   2020-08-14 00:52:56 -0400
+categories: news
+---
+
+WE lauch the new section on the site for you to get all information you need about the company. We love to work on elevator and share with you the advancement.
