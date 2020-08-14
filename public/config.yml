@@ -2,10 +2,17 @@ backend:
   name: github
   repo: alex07L/Rocket_Elevators_Foundation 
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'assets/uploads'
+media_folder: 'public/assets/uploads'
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: '_posts/'
+    folder: 'blog/_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
     fields:
-      - { name: Title }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
