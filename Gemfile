@@ -67,7 +67,8 @@ gem 'ibm_watson'
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
 gem 'jekyll'
-
+gem 'jekyll-feed'
+gem 'rocket-theme', :git => 'https://github.com/alex07L/rocket-theme.git', :branch => 'master'
 
 gem 'dropbox_api'
 gem 'google_maps_service'
