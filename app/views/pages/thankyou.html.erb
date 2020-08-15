@@ -96,6 +96,11 @@
 											CONTACT
 										</a>
 									</li>
+																		<li><!-- CONTACT -->
+										<a href="http://news.relevator.ca/">
+											BLOG
+										</a>
+									</li>
 																		<li>
 										<% if current_user.try(:admin?) || !Employee.find_by(user_id:current_user.try(:id)).nil? %>
 											<%= link_to 'Intervention', '/intervention' %>
