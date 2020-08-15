@@ -39,7 +39,7 @@ class Elevator < ApplicationRecord
   after_update :send_sms, if: :intervention?
    
     
-    #before_update :slack_notifier
+    before_update :slack_notifier
 
     def slack_notifier
 
