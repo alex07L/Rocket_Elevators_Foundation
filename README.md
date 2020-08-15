@@ -1,5 +1,13 @@
 # README
 
+WEEK 9 :
+
+REST API: https://github.com/alex07L/Rocket_Elevators_REST_Foundation
+
+Graphql API: https://github.com/alex07L/Rocket_Elevators_GraphQL
+
+
+
 WEEK 7 : ROCKET ELEVATORS API'S
 
 Implementation different API into our website for Rocket Elevators
