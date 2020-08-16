@@ -138,8 +138,18 @@ section.back-black{
 .horizontal{
     margin: 75px 0 0 0;
     border-top: 6px solid #a33546;
-    width: 50px;
+    width: 4%;
+	left: 48%;
+	position: absolute;
 }
+.m-right{
+	margin-right: 75px;
+}
+
+.m-left{
+	margin-left: 75px;
+}
+
 .margin{
     margin-bottom: 250px;
 }
