@@ -71,6 +71,10 @@ gem 'dropbox_api'
 gem 'google_maps_service'
 gem "recaptcha"
 
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
