@@ -7,4 +7,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  include Devise::Test::IntegrationHelpers
+  include Warden::Test::Helpers
+  
+  def setup
+    @request.env["devise.mapping"] = Devise.mappings[:admin]
+    sign_in FactoryBot.create(:admin)
+  end
 end
