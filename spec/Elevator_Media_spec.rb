@@ -1,7 +1,8 @@
 require 'ElevatorMedia'
+require 'spec_helper'
 
 describe ElevatorMedia do
-	describe "building" do
+	describe "Weather" do
 		streamer = ElevatorMedia::Streamer.new("07112")
 		context "test to get Streamer class" do
 			it "return Streamer class" do
@@ -15,7 +16,9 @@ describe ElevatorMedia do
 		end
 		context "test to get building details" do
 			it "return string" do
-				expect(streamer.getContent).to eq("<div></div>")
+				content = streamer.getContent
+				puts content
+				expect(content).to include("<div>",  "</div>")
 			end
 		end
 	end

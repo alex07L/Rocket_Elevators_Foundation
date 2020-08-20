@@ -28,7 +28,7 @@ RailsAdmin.config do |config|
 
 
 #config.excluded_models= ['Dwhquote','Dwhcustomer','Dwhlead']
-require Rails.root.join('lib', 'rails_admin.rb')
+require Rails.root.join('lib', 'config', 'actions', 'rails_admin.rb')
 
   config.current_user_method(&:current_user)
 

@@ -66,6 +66,7 @@ gem 'ibm_watson'
 
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 
+gem 'webmock'
 
 gem 'dropbox_api'
 gem 'google_maps_service'
@@ -74,6 +75,7 @@ gem "recaptcha"
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 end
+gem 'factory_bot_rails'
 
 
 group :development, :test do
