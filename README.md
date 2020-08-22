@@ -23,6 +23,12 @@ the response is replace by a mock so is a fack response.
 the third test is to check if the content is html and contain <div> and </div>
 that will means is a html stuff
 
+## other test:
+
+I create a test to get if the table address contain the minimum of input
+after that I create a test to get if the index can be render and
+the last test I made is to verify of if you are a normal user you can't go on intervention
+
 
 ## Bonus :
 
@@ -32,6 +38,10 @@ https://github.com/alex07L/TDD-Nodejs
 ```
 https://github.com/alex07L/TDD-csharp
 ```
+```
+https://github.com/alex07L/golang-TDD
+```
+
 
 # WEEK 9 :
 
