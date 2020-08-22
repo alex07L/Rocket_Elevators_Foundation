@@ -1,6 +1,28 @@
 # README
 
-WEEK 9 :
+# WEEK 10 :
+
+create a TDD project in rails
+to start the test you need to type 
+```
+rspec --format doc
+```
+
+I create the test before do something.
+After that I create the ElevatorMedia module on lib directory.
+Every time I add something I do a test and check what is wrong on the code.
+after all test pass, I simplify de code.
+
+## Bonus :
+
+```
+https://github.com/alex07L/TDD-Nodejs
+```
+```
+https://github.com/alex07L/TDD-csharp
+```
+
+# WEEK 9 :
 
 REST API: https://github.com/alex07L/Rocket_Elevators_REST_Foundation
 
@@ -8,7 +30,7 @@ Graphql API: https://github.com/alex07L/Rocket_Elevators_GraphQL
 
 
 
-WEEK 7 : ROCKET ELEVATORS API'S
+# WEEK 7 : ROCKET ELEVATORS API'S
 
 Implementation different API into our website for Rocket Elevators
 
