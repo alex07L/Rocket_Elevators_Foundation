@@ -7,6 +7,10 @@ def intervention
 end
 
 def customer
+headers['Access-Control-Allow-Origin'] = '*'
+headers['Access-Control-Allow-Methods'] = 'GET'
+headers['Access-Control-Request-Method'] = '*'
+headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
 	b = Building.where(customer_id: params[:id])
 	respond_to do |r|
 		r.json {render :json =>b}
@@ -14,6 +18,10 @@ def customer
 end
 
 def building
+headers['Access-Control-Allow-Origin'] = '*'
+headers['Access-Control-Allow-Methods'] = 'GET'
+headers['Access-Control-Request-Method'] = '*'
+headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
 	b = Battery.where(building_id: params[:id])
 	respond_to do |r|
 		r.json {render :json =>b}
@@ -21,6 +29,10 @@ def building
 end
 
 def battery
+headers['Access-Control-Allow-Origin'] = '*'
+headers['Access-Control-Allow-Methods'] = 'GET'
+headers['Access-Control-Request-Method'] = '*'
+headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
 	b = Column.where(battery_id: params[:id])
 	respond_to do |r|
 		r.json {render :json =>b}
@@ -28,6 +40,10 @@ def battery
 end
 
 def column
+headers['Access-Control-Allow-Origin'] = '*'
+headers['Access-Control-Allow-Methods'] = 'GET'
+headers['Access-Control-Request-Method'] = '*'
+headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
 	b = Elevator.where(column_id: params[:id])
 	respond_to do |r|
 		r.json {render :json =>b}
