@@ -3,11 +3,11 @@ class Quote < ApplicationRecord
   belongs_to :category
 
 	# need to be uncomment : after_save
-  after_save :create_quote_ticket
+  #after_save :create_quote_ticket
 
   def create_quote_ticket
        ZendeskAPI::Ticket.create!($client, 
-           :subject => "#{self.fullName} from #{self.companyName}", 
+           :subject => "#{self.Full_Name} from #{self.companyName}", 
            :comment => { 
                :value => "The contact #{self.Full_Name} from company #{self.Company_Name} 
                    can be reached at email #{self.Email} and at phone number #{self.Phone_Number}. 
