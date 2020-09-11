@@ -1,4 +1,18 @@
 # README
+# WEEK 13 : Machine Learning   
+   
+Project made by: Alexandre Levesque, Vincent Mercier and Martin Dussault   
+https://relevator.ca/voice is where the project can be tested   
+   
+We have all our audio files in there   
+https://github.com/alex07L/audio-azure   
+  
+Identification doc:  
+https://docs.google.com/document/d/17gryIU6aYg1_OJUwXo_kGGZXVIK7WXWYpbYj1CzBgZM/edit?usp=sharing  
+  
+Transcription doc  
+https://docs.google.com/document/d/1XhIplJRs9PPOamuXXq1MQrasovNIYL1taVSJNfkM7fI/edit?usp=sharing  
+
 
 # WEEK 10 :
 
