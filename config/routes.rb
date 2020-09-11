@@ -13,6 +13,14 @@ Rails.application.routes.draw do
   }
   
   post 'pages', to: "pages#create"
+  post 'identification', to: "voice#ident"
+  post 'profile', to: "voice#profile"
+  post 'train', to: "voice#train"
+  post 'toText', to: "voice#toText"
+  get 'result', to: "voice#show"
+  get 'voice', to: "voice#index"
+  get 'identification', to: "voice#identification"
+  get 'text', to: "voice#text"
   post 'leads', to: "pages#createLead"
   post 'donateToMe', to: "pages#donateToMe"
   get 'thankyou', to: "pages#thankyou"

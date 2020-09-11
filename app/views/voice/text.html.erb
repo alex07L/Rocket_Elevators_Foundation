@@ -1,0 +1,275 @@
+
+
+<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+		<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+			<!-- TOP NAV -->
+			<header id="topNav">
+				<div class="container">
+
+					<!-- Mobile Menu Button -->
+					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Logo -->
+					<a class="logo float-left" href="index#top">
+						<%= image_tag("R2.png", :alt => "Rocket Elevator logo") %>
+					</a>
+
+					<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+					<div class="navbar-collapse collapse float-right nav-main-collapse">
+						<nav class="nav-main">
+
+							<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+							<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<li>
+									<!-- HOME -->
+									<a href="index#home">
+										HOME
+									</a>
+								</li>
+								<li class="active">
+									<!-- SERVICES -->
+									<a href="index.html#services" class="dropdown-toggle">
+										SERVICES
+									</a>
+									<ul class="dropdown-menu sub-menu">
+										<li><a href="residential">Residential</a></li>
+										<li><a href="corporate">Corporate</a></li>
+										<li class="active"><a href="quote">Get a Quote</a></li>
+									</ul>
+								</li>
+								<li>
+									<!-- WORK -->
+									<a href="index.html#portfolio">
+										PORTFOLIO
+									</a>
+								</li>
+								<li>
+									<!-- NEWS -->
+									<a href="index.html#news">
+										NEWS
+									</a>
+								</li>
+								<li>
+									<!-- CLIENTS -->
+									<a href="index.html#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li>
+									<!-- CONTACT -->
+									<a href="index.html#contact">
+										CONTACT
+									</a>
+								</li>
+																	<li><!-- CONTACT -->
+										<a href="http://news.relevator.ca/">
+											BLOG
+										</a>
+									</li>
+																	<li>
+										<% if current_user.try(:admin?) || !Employee.find_by(user_id:current_user.try(:id)).nil? %>
+											<%= link_to 'Intervention', '/intervention' %>
+										<% end %>
+									</li>
+								<li>
+								<% if current_user.try(:admin?) || !Customer.find_by(user_id:current_user.try(:id)).nil?|| !Employee.find_by(user_id:current_user.try(:id)).nil? %>
+										<%= link_to 'Dashboard', rails_admin.dashboard_path %>
+									<% end %>
+									</li>
+									<li>
+									<% if current_user %>
+										<%= link_to "Sign out", destroy_user_session_path, :method => :get %>
+									<% else %>
+										<%= link_to 'Login', new_user_session_path %>
+									<% end %>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+			</header>
+			<!-- /Top Nav -->
+
+		</div>
+
+
+		<section class="container">
+			<div class="row">
+			<div class="col-sm d-flex justify-content-center align-items-center">
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/voice">Create Profil</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/identification">Get Identification</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/text">Get Text</a>
+    </li>
+  </ul>
+</nav>
+</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm d-flex justify-content-center align-items-center">
+					<h1>Get Text from file</h1>
+				</div>
+			</div>
+			<div class="row">
+				<%= form_tag toText_path, multipart: true do %>
+								<fieldset>
+									<div class="row">
+										<div class="col-md-12">
+											<label for="contact:attachment">File Attachment</label>
+											<!-- custom file upload -->
+											<input class="custom-file-upload" type="file" name="audio_file" id="audio_file"  data-btn-text="Select a File" />
+											<small class="text-muted block">(wave)</small>
+										</div>
+									</div>
+
+								</fieldset>
+
+								<div class="row">
+									<div class="col-md-12">
+										<button type="submit" class="btn blue"><i class="fa fa-check"></i> GET TEXT</button>
+									</div>
+								</div>
+							<% end %>
+
+			</div>
+
+		</section>
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+
+
+				<div class="row">
+
+					<!-- col #1 -->
+					<div class="col-md-8">
+
+						<h3 class="letter-spacing-1">WHY US?</h3>
+
+						<!-- Small Description -->
+						<p>
+							Rocket Elevator is a Company in the elevator industry. We work to improve all elevators with our repair and engineer team. We have our own manufacturing plant to create quick elevator.
+							</p>
+						<h2>(581) 701-0303</h2>
+						<a href="/donate">DONATE TO ROCKET ELEVATORS</a>
+					</div>
+					<!-- /col #1 -->
+
+					<!-- col #2 -->
+					<div class="col-md-4">
+						<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+						<!-- Newsletter Form -->
+						<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+						<form class="validate" action="php/newsletter.php" method="post"
+							data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required"
+									placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn blue" type="submit">Subscribe</button>
+								</span>
+							</div>
+						</form>
+						<!-- /Newsletter Form -->
+
+
+					</div>
+					<!-- /col #2 -->
+
+				</div>
+
+
+			</div>
+			<div class="copyright">
+				<div class="container">
+					&copy; All Rights Reserved, Rocket Elevator
+				</div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+
+
+	</div>
+	<!-- /wrapper -->
+
+
+		<%= javascript_include_tag 'contact', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'smoothscroll', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'scripts', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
