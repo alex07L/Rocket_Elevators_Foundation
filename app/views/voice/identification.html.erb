@@ -130,7 +130,7 @@
 									<div class="col-md d-flex justify-content-center align-items-center">
 										<select id="profil" name="profil[]" multiple >									
 										<% Profil.where(:enrolled => true).each do |c| %>
-										<option value="<%= c.voice %>"><%= c.fullName%></option>
+										<option value="<%= c.voice %>"><%= c.fullName%>(<%= c.lang%>)</option>
 									<% end %>
 										</select>
 									</div>

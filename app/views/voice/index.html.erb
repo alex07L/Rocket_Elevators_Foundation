@@ -147,14 +147,16 @@
 												<input class="form-control" type="text" name="fullName" id="fullName"  />
 
 											</div>
-											<div class="col-md-12 text-center">
+											
+									</div>
+									<div class="row">
+									<div class="col-md-12 text-center">
 										<select id="lang" name="lang">									
 										<option value="en-us">english</option>
 										<option value="fr-ca">french</option>
 										</select>
 									</div>
 									</div>
-
 								</fieldset>
 
 								<div class="row">
@@ -184,7 +186,7 @@
 									<div class="col-md-12 text-center">
 										<select id="profil" name="profil">									
 										<% Profil.all.each do |c| %>
-										<option value="<%= c.voice %>"><%= c.fullName%></option>
+										<option value="<%= c.voice %>"><%= c.fullName%>(<%= c.lang%>)</option>
 									<% end %>
 										</select>
 									</div>
