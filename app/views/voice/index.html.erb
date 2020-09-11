@@ -129,14 +129,19 @@
 			<div class="row ">
 				<div class="col-sm d-flex justify-content-center align-items-center">
 					<h1>Profile Creation</h1>
-					<p>If the profile is already learned, skip to the Identification tab above</p>
+					
 				</div>
+
 			</div>
-			<div class="row">
-				<%= form_tag profile_path, multipart: true do %>
+			<div class="row ">
+				<div class="col-sm d-flex justify-content-center align-items-center">
+				<p>If the profile is already learned, skip to the Identification tab above</p>
+				</div></div>
+			<div class="row d-flex justify-content-center align-items-center">
+				<%= form_tag profile_path, multipart: true  do %>
 								<fieldset>
 									<div class="row">
-											<div class="mx-auto text-center col-md-12">
+											<div class="col-sm text-center">
 												<label for="fullName">Full Name:</label>
 												<!-- custom file upload -->
 												<input class="form-control" type="text" name="fullName" id="fullName"  />
@@ -147,7 +152,7 @@
 								</fieldset>
 
 								<div class="row">
-									<div class="mx-auto text-center col-md-12">
+									<div class="col-sm d-flex justify-content-center align-items-center">
 										<button type="submit" class="btn blue"><i class="fa fa-check"></i> SAVE NEW NAME</button>
 									</div>
 								</div>
@@ -156,16 +161,21 @@
 			</div>
 			
 			<div class="row ">
-				<div class="col-sm mx-auto text-center d-flex justify-content-center align-items-center">
-					<h1>Profile Learning</h1>
-					<p>This section is to associate the name with a voice pattern. Use a single voice audio recording only.</p>
+				<div class="col-sm d-flex justify-content-center align-items-center">
+					<h1>Profile Learning</h1><br>
+					
 				</div>
+
 			</div>
-			<div class="row">
+			<div class="row ">
+							<div class="col-sm d-flex justify-content-center align-items-center">
+				<p>This section is to associate the name with a voice pattern. Use a single voice audio recording only.</p>
+				</div></div>
+			<div class="row d-flex justify-content-center align-items-center">
 				<%= form_tag train_path, multipart: true do %>
 								<fieldset>
-									<div class="row">
-									<div class="col-md-12">
+									<div class="row d-flex justify-content-center align-items-center">
+									<div class="col-md-12 text-center">
 										<select id="profil" name="profil">									
 										<% Profil.all.each do |c| %>
 										<option value="<%= c.voice %>"><%= c.fullName%></option>
@@ -173,7 +183,7 @@
 										</select>
 									</div>
 												
-											<div class="col-md-12">
+											<div class="col-md-6 text-center">
 												<label for="contact:attachment">Audio File</label>
 												<!-- custom file upload -->
 												<input class="custom-file-upload" type="file" name="audio_file" id="audio_file"  data-btn-text="Select a File" />
@@ -185,7 +195,7 @@
 								</fieldset>
 
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md d-flex justify-content-center align-items-center">
 										<button type="submit" class="btn blue"><i class="fa fa-play"></i> ASSOCIATE</button>
 									</div>
 								</div>

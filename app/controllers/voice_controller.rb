@@ -69,7 +69,7 @@ end
 			#http.use_ssl = true
 #
 			#request = Net::HTTP::Post.new(url)
-			#request["Ocp-Apim-Subscription-Key"] = "e7ecda2e57a245d2be044e1d9d67f789"
+			#request["Ocp-Apim-Subscription-Key"] = ENV['AZURE']
 			#request["Content-Type"] = "multipart/form-data"
 			#request.body = params[:audio_file].read
 #
