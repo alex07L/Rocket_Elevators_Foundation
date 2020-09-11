@@ -10,11 +10,11 @@ def profile
 	request = Net::HTTP::Post.new(url)
 	request["Ocp-Apim-Subscription-Key"] = ENV['AZURE']
 	request["Content-Type"] = "application/json"
-	request.body = '{ "locale": "en-us"}'
+	request.body = '{ "locale": "'+params[:lang]+'"}'
 
 	i = http.request(request)
 	puts(i.read_body)
-	Profil.create(fullName: params[:fullName], voice: JSON.parse(i.read_body)['profileId'])
+	Profil.create(fullName: params[:fullName], voice: JSON.parse(i.read_body)['profileId'], lang: params[:lang])
 	end
 redirect_to "/voice"
 
