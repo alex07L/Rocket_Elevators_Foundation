@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_133703) do
+ActiveRecord::Schema.define(version: 2020_09_10_192029) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "aType"
@@ -191,6 +191,13 @@ ActiveRecord::Schema.define(version: 2020_08_10_133703) do
     t.string "fileName", default: ""
     t.string "shareLink", default: ""
     t.index ["type_id"], name: "index_leads_on_type_id"
+  end
+
+  create_table "profils", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "voice"
+    t.string "fullName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
