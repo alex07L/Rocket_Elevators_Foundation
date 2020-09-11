@@ -119,11 +119,11 @@
 					<h1>Identification</h1>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row d-flex justify-content-center align-items-center">
 				<%= form_tag identification_path, multipart: true do %>
 								<fieldset>
-									<div class="row">
-									<div class="col-md-12">
+									<div class="row text-center">
+									<div class="col-md d-flex justify-content-center align-items-center">
 										<select id="profil" name="profil[]" multiple >									
 										<% Profil.where(:enrolled => true).each do |c| %>
 										<option value="<%= c.voice %>"><%= c.fullName%></option>
@@ -141,7 +141,7 @@
 								</fieldset>
 
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-12 d-flex justify-content-center align-items-center">
 										<button type="submit" class="btn blue"><i class="fa fa-check"></i> Get A verification</button>
 									</div>
 								</div>
