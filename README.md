@@ -1,4 +1,3 @@
-# README
 # WEEK 13 : Machine Learning   
    
 Project made by: Alexandre Levesque, Vincent Mercier and Martin Dussault   
