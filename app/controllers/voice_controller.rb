@@ -35,7 +35,7 @@ def train
 			i = http.request(request)
 			puts(i.read_body)
 			if JSON.parse(i.read_body)['enrollmentStatus'] == 'Enrolled'
-				Profil.where(fullName: params[:profil]).first.update_attribute(:enrolled, true)
+				Profil.find_by(voice: params[:profil]).update_attribute(:enrolled, true)
 			end 
 	end
 
