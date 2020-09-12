@@ -134,6 +134,14 @@
 			<div class="row d-flex justify-content-center align-items-center">
 				<%= form_tag toText_path, multipart: true do %>
 								<fieldset>
+									<div class="row">
+									<div class="col-md-12 text-center">
+										<select id="lang" name="lang">									
+										<option value="en-US">english</option>
+										<option value="fr-CA">french</option>
+										</select>
+									</div>
+									</div>
 									<div class="row text-center">
 										<div class="col-md-12">
 											<label for="contact:attachment">File Attachment</label>

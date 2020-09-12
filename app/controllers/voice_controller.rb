@@ -84,7 +84,7 @@ end
 def toText
 
 if !params[:audio_file].nil?
-			url = URI("https://westus.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US")
+			url = URI("https://westus.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language="+params[:lang])
 
 			http = Net::HTTP.new(url.host, url.port)
 			http.use_ssl = true
