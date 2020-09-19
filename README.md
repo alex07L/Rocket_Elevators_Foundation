@@ -1,3 +1,16 @@
+# WEEK 14 :
+I add the google analytics on the application.html.erb,
+my deploy and database work, just missing a configuration on the server
+
+```
+http://3.96.136.196
+
+```
+to get all password and username to go on this account contact me on slack.
+
+
+
+
 # WEEK 13 : Machine Learning   
    
 Project made by: Alexandre Levesque, Vincent Mercier and Martin Dussault   
