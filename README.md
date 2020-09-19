@@ -4,7 +4,6 @@ my deploy and database work, just missing a configuration on the server
 
 ```
 http://3.96.136.196
-
 ```
 to get all password and username to go on this account contact me on slack.
 
